@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="">
+  <ion-list-header class="list-head" (click)="goPage(0)">按钮<ion-icon name="arrow-forward" item-end></ion-icon></ion-list-header>
+
+  <ion-list-header class="list-head" (click)="goPage(1)">上拉菜单<ion-icon name="arrow-forward" item-end></ion-icon></ion-list-header>
+
+  <ion-list-header class="list-head" (click)="component.alert = !component.alert">Alerts
+    <ion-icon [name]="component.alert?'arrow-down':'arrow-forward'" item-end></ion-icon>
+  </ion-list-header>
+  <ion-list *ngIf="component.alert">
+    <ion-item class="color-666" (click)="goPage(2)">警告框<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+    <ion-item class="color-666" (click)="goPage(3)">对话弹出框<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+    <ion-item class="color-666" (click)="goPage(4)">确认弹出框<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+    <ion-item class="color-666" (click)="goPage(5)">单选弹出框<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+    <ion-item class="color-666" (click)="goPage(6)">复选弹出框<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header class="list-head" (click)="goPage(7)">Badges<ion-icon name="arrow-forward" item-end></ion-icon></ion-list-header>
+  </ion-list>
+  <ion-list>
+    <ion-list-header class="list-head" (click)="goPage(8)">Cards 卡片<ion-icon name="arrow-forward" item-end></ion-icon></ion-list-header>
+  </ion-list>
+
+</ion-content>

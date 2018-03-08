@@ -1,0 +1,20 @@
+.page-about {
+  background-color: #f4f4f4;
+  .buttonAction{
+    background-color: aqua;
+  }
+
+
+  .intend{
+    min-height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+  }
+}
+/*.action-sheet-btn-color{
+  color:#F7BB41 !important;
+}*/

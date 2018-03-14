@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-cards',
-  templateUrl: 'cards.html'
+  selector: 'page-radio',
+  templateUrl: 'radio.html'
 })
-export class CardsPage {
+export class RadioPage {
 
   constructor(public navCtrl: NavController) {
 

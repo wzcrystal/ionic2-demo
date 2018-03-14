@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-cards',
-  templateUrl: 'cards.html'
+  selector: 'page-dateTime',
+  templateUrl: 'dateTime.html'
 })
-export class CardsPage {
+export class DateTimePage {
+
+  myDate:string = '2018-01-01';
 
   constructor(public navCtrl: NavController) {
 

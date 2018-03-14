@@ -23,8 +23,20 @@
   <ion-list>
     <ion-list-header class="list-head" (click)="goPage(7)">Badges<ion-icon name="arrow-forward" item-end></ion-icon></ion-list-header>
   </ion-list>
+
   <ion-list>
     <ion-list-header class="list-head" (click)="goPage(8)">Cards 卡片<ion-icon name="arrow-forward" item-end></ion-icon></ion-list-header>
+  </ion-list>
+
+  <ion-list-header class="list-head" (click)="component.form = !component.form">表单
+    <ion-icon [name]="component.form?'arrow-down':'arrow-forward'" item-end></ion-icon>
+  </ion-list-header>
+  <ion-list *ngIf="component.form">
+    <ion-item class="color-666" (click)="goPage(9)">复选<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+    <ion-item class="color-666" (click)="goPage(10)">日期时间选择<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+    <ion-item class="color-666" (click)="goPage(11)">输入框<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+    <ion-item class="color-666" (click)="goPage(12)">单选<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
+    <ion-item class="color-666" (click)="goPage(6)">复选弹出框<ion-icon name="arrow-forward" item-end></ion-icon></ion-item>
   </ion-list>
 
 </ion-content>

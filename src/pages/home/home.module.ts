@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
+import { FormModule } from './form/form.module';
 
 import { HomePage } from './home';
 import { ButtonPage } from './button/button';
@@ -26,7 +27,8 @@ import { CardsPage } from './cards/cards';
     CardsPage
   ],
   imports: [
-    IonicModule
+    IonicModule,
+    FormModule
   ],
   entryComponents: [
     HomePage,

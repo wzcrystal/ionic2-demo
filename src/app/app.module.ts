@@ -11,6 +11,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { link } from '../pages/home/home.route';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -21,8 +23,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,{
+      iconMode: 'ios',//安卓icon强制使用ios的icon以及样式
+      mode: 'ios',//样式强制使用ios样式
       backButtonText:'返回'
-    }),
+    },link),
     HomeModule
   ],
   bootstrap: [IonicApp],

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import { App, NavController } from 'ionic-angular';
 
 import { ButtonPage } from './button/button';
@@ -10,6 +10,10 @@ import { RadioAlert } from './alert/radio-alert/radio-alert';
 import { CheckboxAlert } from './alert/checkbox-alert/checkbox-alert';
 import { BadgePage } from './badge/badge';
 import { CardsPage } from './cards/cards';
+import { FABPage } from './FAB/FAB';
+import { GesturesPage } from './gestures/gestures';
+import { GridPage } from './grid/grid';
+import { ListPage } from './list/list';
 
 import { FormService } from './form/form';
 
@@ -18,14 +22,15 @@ import { FormService } from './form/form';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  public pageList=[ButtonPage,ActionSheetPage,AlertPage,PromptAlertPage,
+  public pageList: Array<any>=[ButtonPage,ActionSheetPage,AlertPage,PromptAlertPage,
     ConfirmAlertPage,RadioAlert,CheckboxAlert,
     BadgePage,CardsPage];
 
   constructor(public navCtrl: NavController, public appCtrl: App,
               public formService: FormService) {
-    this.pageList=[...this.pageList,...formService.pageList];
+    let nextPage = [FABPage,GesturesPage,GridPage,ListPage];
+    let laterPage = [...formService.pageList, ...nextPage];
+    this.pageList=[...this.pageList,...laterPage];
   }
 
   component={
@@ -35,10 +40,12 @@ export class HomePage {
 
   //进入详情
   goPage(type) {
-    //console.log(this.appCtrl.getRootNav())
-    //console.log(this.appCtrl.getRootNavById('n4'))
+    /*this.appCtrl.getRootNav().push(this.pageList[type],{
+      user:'crystal'
+    });*/
     this.appCtrl.getRootNav().push(this.pageList[type]);
-    //建议使用此方法
+    //this.navCtrl.push(this.pageList[type]);
+
     //this.appCtrl.getRootNavById('n4').push(this.pageList[type]);
   }
 

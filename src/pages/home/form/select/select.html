@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>选择器</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>省</ion-label>
+      <ion-select cancelText="取消" okText="确定">
+        <ion-option>广东省</ion-option>
+        <ion-option>湖南省</ion-option>
+        <ion-option>江苏省</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>市</ion-label>
+      <ion-select cancelText="取消" okText="确定" interface="popover">
+        <ion-option>长沙市</ion-option>
+        <ion-option>岳阳市</ion-option>
+        <ion-option>湘潭市</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>区</ion-label>
+      <ion-select cancelText="取消" okText="确定" interface="action-sheet">
+        <ion-option>岳麓区</ion-option>
+        <ion-option>开福区</ion-option>
+        <ion-option>天心区</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>喜爱的花(可多选)</ion-label>
+      <ion-select cancelText="取消" okText="确定" multiple="true">
+        <ion-option>茉莉花</ion-option>
+        <ion-option>天竺葵</ion-option>
+        <ion-option>蔷薇</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

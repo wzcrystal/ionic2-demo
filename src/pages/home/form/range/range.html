@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>滑块控件</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <ion-range min="20" max="40" [(ngModel)]="sunny">
+      <ion-icon range-left small name="sunny"></ion-icon>
+      <ion-icon range-right name="sunny"></ion-icon>
+    </ion-range>
+
+    <ion-range step="20" snaps="true">
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>100</ion-label>
+    </ion-range>
+
+    <ion-range dualKnobs="true" [(ngModel)]="structure">
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>400</ion-label>
+    </ion-range>
+  </ion-list>
+</ion-content>

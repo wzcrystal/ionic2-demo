@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/*import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 import { FormModule } from './form/form.module';
 
@@ -14,47 +14,13 @@ import { BadgePage } from './badge/badge';
 import { CardsPage } from './cards/cards';
 import { FABPage } from './FAB/FAB';
 import { GesturesPage } from './gestures/gestures';
-import { GridPage } from './grid/grid';
+import { GridPage } from './grid/grid';*/
 import { ListPage } from './list/list';
-import {TabsPage} from "../tabs/tabs";
+/*import {TabsPage} from "../tabs/tabs";*/
 
-@NgModule({
-  declarations: [
-    HomePage,
-    ButtonPage,
-    ActionSheetPage,
-    AlertPage,
-    PromptAlertPage,
-    ConfirmAlertPage,
-    RadioAlert,
-    CheckboxAlert,
-    BadgePage,
-    CardsPage,
-    FABPage,
-    GesturesPage,
-    GridPage,
-    ListPage
-  ],
-  imports: [
-    IonicModule,
-    FormModule
-  ],
-  entryComponents: [
-    HomePage,
-    ButtonPage,
-    ActionSheetPage,
-    AlertPage,
-    PromptAlertPage,
-    ConfirmAlertPage,
-    RadioAlert,
-    CheckboxAlert,
-    BadgePage,
-    CardsPage,
-    FABPage,
-    GesturesPage,
-    GridPage,
-    ListPage
-  ],
-  providers: []
-})
-export class HomeModule {}
+
+export const link= {
+  links: [
+    { component: ListPage, name: 'List', segment: 'list' }
+  ]
+}
